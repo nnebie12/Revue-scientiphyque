@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { Header } from './components/layout/Header'
+import { Header } from '../src/components/hearder/Header'
 import { MobileMenu } from './components/layout/MobileMenu'
 import { Hero } from './components/sections/Hero'
 import { AboutSection } from './components/sections/AboutSection'
 import { FeaturesSection } from './components/sections/FeaturesSection'
 import { ArticlesSection } from './components/sections/ArticlesSection'
 import { Sidebar } from './components/layout/Sidebar'
-import { Footer } from './components/layout/Footer'
+import { Footer } from './components/footer/Footer'
 import './App.css'
 
 function App() {

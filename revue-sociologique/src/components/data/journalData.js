@@ -1,4 +1,4 @@
-import { FileText, BookOpen, Users, Mail } from "lucide-react";
+import { BookOpen, FileText, Mail, Users } from "lucide-react";
 
 export const articlesData = [
   {
@@ -6,21 +6,21 @@ export const articlesData = [
     title: "Guilty Feeling as a Catalyst of Moral Transformation in Nathaniel Hawthorne's The Scarlet Letter",
     authors: "Michel PODA, Adama Sabine MOYENGA",
     pages: "1-20",
-    doi: "https://dx.doi.org/10.4314/akiri.v3i3.1"
+    doi: "https://dx.doi.org/10.4314/ARME (Revue Africaine de migration et Environnement).v3i3.1"
   },
   {
     id: 2,
     title: "Bonne gouvernance en Afrique : une relecture de l'Egypte antique dans the resolutionaries d'Ayi Kwei Armah",
     authors: "Souleymane TUO",
     pages: "21-36",
-    doi: "https://dx.doi.org/10.4314/akiri.v3i3.2"
+    doi: "https://dx.doi.org/10.4314/ARME (Revue Africaine de migration et Environnement).v3i3.2"
   },
   {
     id: 3,
     title: "Othello and Steve Richard: An Intertextual Reading",
     authors: "SILUE Nannougou, SILUE Ténéna Mamadou",
     pages: "37-49",
-    doi: "https://dx.doi.org/10.4314/akiri.v3i3.3"
+    doi: "https://dx.doi.org/10.4314/ARME (Revue Africaine de migration et Environnement).v3i3.3"
   }
 ];
 
@@ -44,12 +44,12 @@ export const featuresData = [
     description: "Accès gratuit aux articles publiés",
     color: "green"
   },
-  {
+  /*{
     icon: Users,
     title: "Multidisciplinaire",
     description: "Géographie, philosophie et plus",
     color: "purple"
-  },
+  },*/
   {
     icon: Mail,
     title: "Trimestrielle",

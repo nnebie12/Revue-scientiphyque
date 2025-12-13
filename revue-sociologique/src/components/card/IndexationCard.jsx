@@ -1,5 +1,5 @@
 import React from "react";
-import { indexationData } from "../../data/indexationData";
+import { indexationData } from "../data/journalData";
 
 
 export const IndexationCard = () => {
