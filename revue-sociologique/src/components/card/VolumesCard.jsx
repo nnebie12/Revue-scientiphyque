@@ -1,6 +1,6 @@
 import React from "react";
-import { VolumeItem } from "../items/VolumeItem";
-import { volumesData } from "../../data/volumesData";
+import { VolumeItem } from "../item/VolumeItem";
+import { volumesData } from "../data/journalData";
 
 export const VolumesCard = () => {
   return (
