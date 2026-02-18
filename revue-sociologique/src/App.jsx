@@ -1,39 +1,48 @@
 import { useState } from 'react'
-import { Header } from '../src/components/hearder/Header'
-import { MobileMenu } from './components/layout/MobileMenu'
-import { Hero } from './components/sections/Hero'
-import { AboutSection } from './components/sections/AboutSection'
-import { FeaturesSection } from './components/sections/FeaturesSection'
-import { ArticlesSection } from './components/sections/ArticlesSection'
-import { Sidebar } from './components/layout/Sidebar'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import { Footer } from './components/footer/Footer'
-import './App.css'
+import { Header } from './components/hearder/Header'
+import { MobileMenu } from './components/layout/MobileMenu'
+
+import Login from './pages/auth/Login'
+import About from './pages/public/About'
+import Articles from './pages/public/Articles'
+import Contact from './pages/public/Contact'
+import Home from './pages/public/Home'
+
+import AdminDashboard from './pages/admin/AdminDashboard'
 
 function App() {
-
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('apercu');
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <MobileMenu isOpen={menuOpen} />
-      <Hero />
-      
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            <AboutSection />
-            <FeaturesSection />
-            <ArticlesSection activeTab={activeTab} setActiveTab={setActiveTab} />
-          </div>
-          <Sidebar />
-        </div>
+    <Router>
+      <div className="min-h-screen bg-gray-50 flex flex-col">
+        {/* Le Header et le MobileMenu restent visibles sur toutes les pages */}
+        <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <MobileMenu isOpen={menuOpen} />
+        
+        {/* Contenu dynamique selon l'URL */}
+        <main className="flex-grow">
+          <Routes>
+            {/* Route Accueil : On y met tes composants actuels */}
+            <Route path="/" element={<Home />} />
+            
+            {/* Autres Routes Publiques */}
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/a-propos" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+
+            {/* Routes Admin (Protection à ajouter plus tard) */}
+            <Route path="/admin/AdminDashboard" element={<AdminDashboard />} />
+          </Routes>
+        </main>
+        
+        <Footer />
       </div>
-      
-      <Footer />
-    </div>
+    </Router>
   );
 }
 
-export default App
+export default App;

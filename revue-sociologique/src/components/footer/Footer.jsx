@@ -15,15 +15,15 @@ export const Footer = () => {
           </FooterColumn>
           
           <FooterColumn title="Informations">
-            <FooterLink href="#">Soumettre un article</FooterLink>
-            <FooterLink href="#">Statut de l'article</FooterLink>
-            <FooterLink href="#">Droits d'auteur</FooterLink>
+            <FooterLink href="/submit">Soumettre un article</FooterLink>
+            <FooterLink href="/status">Statut de l'article</FooterLink>
+            <FooterLink href="/copyright">Droits d'auteur</FooterLink>
           </FooterColumn>
           
           <FooterColumn title="Liens utiles">
             <FooterLink href="#">Processus évaluation</FooterLink>
             <FooterLink href="#">FAQ</FooterLink>
-            <FooterLink href="#">Contact</FooterLink>
+            <FooterLink href="/contact">Contact</FooterLink>
           </FooterColumn>
           
           <FooterColumn title="Contact">

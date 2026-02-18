@@ -1,4 +1,3 @@
-import React from "react";
 import { TabButton } from "../layout/TabButton";
 import { ArticlesTab } from "../ArticlesTab";
 import { OverviewTab } from "../OverviewTab";
